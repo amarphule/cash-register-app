@@ -13,28 +13,38 @@
       Enter the bill amount and cash given by the customer and know minimum
       number of notes to return.
     </p>
-    <label for="bill-amount">Bill Amount: </label>
+    <label class="bill-lable" for="bill-amount">Bill Amount: </label>
     <input type="number" id="bill-amount" />
-    <label for="bill-amount">Cash Given: </label>
+    <label class="bill-lable" for="cash-given">Cash Given: </label>
     <input type="number" id="cash-given" />
     <button>Check</button>
-    <table>
+    <p class="errorMessage"></p>
+    <table class="cash-table">
       <caption>
         Return Change
       </caption>
-      <tr>
-        <td>Number of notes</td>
-      </tr>
-      <tr>
-        <td>Notes</td>
-        <td>2000</td>
-        <td>500</td>
-        <td>100</td>
-        <td>20</td>
-        <td>10</td>
-        <td>5</td>
-        <td>1</td>
-      </tr>
+      <tbody>
+        <tr>
+          <th>Number of notes</th>
+          <td class="numberOfNotes"></td>
+          <td class="numberOfNotes"></td>
+          <td class="numberOfNotes"></td>
+          <td class="numberOfNotes"></td>
+          <td class="numberOfNotes"></td>
+          <td class="numberOfNotes"></td>
+          <td class="numberOfNotes"></td>
+        </tr>
+        <tr>
+          <th>Notes</th>
+          <td>2000</td>
+          <td>500</td>
+          <td>100</td>
+          <td>20</td>
+          <td>10</td>
+          <td>5</td>
+          <td>1</td>
+        </tr>
+      </tbody>
     </table>
     <script src="app.js"></script>
   </body>

@@ -1,6 +1,67 @@
-table,
+:root {
+  --rpimary-color: hsl(220, 3%, 77%);
+  --secondary-color: hsl(215, 25%, 70%);
+  --dark-color: hsl(215, 62%, 21%);
+}
+body {
+  text-align: center;
+  background-color: hsl(220, 3%, 77%);
+}
+h1 {
+  margin: 1rem;
+  padding: 2rem;
+}
+p {
+  font-size: 20px;
+}
+
+input[type="number"] {
+  font-size: 14px;
+  outline: rgb(182, 177, 177);
+  padding: 0.6rem 1rem;
+  margin: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 258px;
+  background-color: var(--secondary-color);
+}
+
+button {
+  background: var(--dark-color);
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-size: large;
+  cursor: pointer;
+  outline: #fff;
+  color: #fff;
+  margin: auto;
+  display: block;
+}
+.bill-lable {
+  display: block;
+  font-size: large;
+  font-weight: 600;
+}
+
+/* Table*/
+.cash-table {
+  width: 50%;
+  text-align: justify;
+  border-collapse: collapse;
+  margin: auto;
+}
+caption {
+  margin: 1rem auto;
+  font-size: x-large;
+  font-weight: 500;
+}
+
 th,
 td {
-  border: 1px solid black;
+  border: 2px solid var(--dark-color);
+  width: 0%;
   border-collapse: collapse;
+  padding: 0.8rem;
 }
