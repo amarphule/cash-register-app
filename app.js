@@ -11,11 +11,16 @@ checkButton.addEventListener("click", () => {
     let cash = Number(cashGiven.value)
     errorMessage.style.display = "none"
     if (bill > 0) {
+
         if (cash > bill) {
             let returnAmount = cash - bill
             countOfNote(returnAmount)
         } else {
             errorMsg("You need to give more cash. 💵")
+        }
+
+        if (bill === cash) {
+            errorMsg("Nothing to return!")
         }
 
     } else {
