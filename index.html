@@ -14,9 +14,19 @@
       number of notes to return.
     </p>
     <label class="bill-lable" for="bill-amount">Bill Amount: </label>
-    <input type="number" id="bill-amount" />
+    <input
+      type="number"
+      min="1"
+      id="bill-amount"
+      oninput="validity.valid||(value='');"
+    />
     <label class="bill-lable" for="cash-given">Cash Given: </label>
-    <input type="number" id="cash-given" />
+    <input
+      type="number"
+      min="1"
+      id="cash-given"
+      oninput="validity.valid||(value='');"
+    />
     <button id="check-button">Check</button>
     <p id="errorMessage"></p>
     <table class="cash-table">

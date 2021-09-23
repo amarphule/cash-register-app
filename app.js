@@ -7,13 +7,19 @@ const numberOfNotes = document.querySelectorAll(".number-of-notes")
 const notes = [2000, 500, 100, 20, 10, 5, 1]
 
 checkButton.addEventListener("click", () => {
+    let bill = Number(billAmount.value)
+    let cash = Number(cashGiven.value)
     errorMessage.style.display = "none"
-    if (billAmount.value > 0) {
-        let returnAmount = cashGiven.value - billAmount.value
-        countOfNote(returnAmount)
+    if (bill > 0) {
+        if (cash > bill) {
+            let returnAmount = cash - bill
+            countOfNote(returnAmount)
+        } else {
+            errorMsg("You need to give more cash. 💵")
+        }
 
     } else {
-        error("Enter valid number")
+        errorMsg("Enter valid Amount. 🤔")
     }
 
 })
@@ -30,7 +36,7 @@ function countOfNote(returnAmount) {
         numberOfNotes[i].innerText = numOfNotes
     }
 }
-const error = message => {
+const errorMsg = message => {
     errorMessage.style.display = "block"
     errorMessage.innerText = message
 }
